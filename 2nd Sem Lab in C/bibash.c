@@ -129,7 +129,7 @@ int main() {
 
 /*Write a program to find the position of the character 'C' in the sentence "idea without execution is worthless" using pointer and string.*/
 
-/*#include <stdio.h>
+#include <stdio.h>
 
 int main() {
     char str[] = "idea without execution is worthless";
@@ -153,12 +153,12 @@ int main() {
         printf("Character '%c' not found in the string.\n", ch);
 
     return 0;
-}*/
+}
 
 
 /*Write a program to find the average expenditure of a company for each month of each year, each year and average over the range of years specified. Use arrays to construct a table, display the table of expenditure and find the sum and average.*/
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 #define MAX_YEARS 10
 #define MONTHS 12
@@ -207,7 +207,7 @@ int main() {
     printf("\nOverall Average Expenditure: %.2f\n", totalAvg);
 
     return 0;
-}
+}*/
 
 
 
