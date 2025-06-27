@@ -67,58 +67,54 @@ int main()
 
 /*2. Assume that you want to check whether the number is prime or not. Write a program that asks for numbers repeatedly. When it finishes checking a number the program asks if the user wants to do another calculation. The response can be 'y' or 'n'. Don't forget to use the object-oriented concept.*/
 
-/*#include <iostream>
+/*#include<iostream>
 using namespace std;
-
-class checkNum
-{
-private:
+class check{
+    private: 
     int num;
-
-public:
-    void input()
-    {
-        cout << "Enter any number :" << endl;
-        cin >> num;
+    int count;
+    public:
+    void set(int n){
+        num=n;
     }
-    bool prime()
-    {
-        if (num <= 1)
-        {
-            return false;
-            for (int i = 2; i * i <= num; i++)
-            {
-                if (num % i == 0)
-
-                    return false;
-            }
-            return true;
+    void prime(){
+        count=0;
+        for(int i=2;i<num;i++){
+            if(num%i==0) {
+              count=0;
+                break;
+        }
+            else 
+            count=1;
         }
     }
 
-    void display()
-    {
-        if (prime())
-            cout << num << " prime number." << endl;
-        else
-            cout << num << " not a prime number." << endl;
+    void display(){
+        if(count==1){
+            cout<<num<<" is prime";
+        }else{
+            cout<<num<<" not prime";
+        }
     }
-};
-int main()
-{
-    char choice;
-    do {
-        checkNum check;
-        check.input();
-        check.display();
-        cout << "Do you want to check another number? (y/n): ";
-        cin >> choice;
-    } while (choice == 'y' || choice == 'Y');
-     cout << "Exit" << endl;
-    return 0;
-}
-*/
 
+};
+int main(){
+    check c;
+    int n;
+    char ch;
+    do{
+        cout<<"Enter any number";
+        cin>>n;
+        c.set(n);
+        c.prime();
+        c.display();
+         cout<<"Do you want to continue(y/n)";
+         cin>>ch;
+
+    }while(ch=='y' || ch=='Y');
+    return 0;
+    
+}*/
 /*3. Create a class called carpark that has int data member for car id, int data member for charge/hour, and float data member for the parked time. Make functions to set data members and show the charges and parked hours of the corresponding car id. Make functions for setting and showing the data members. Member function should be called from other functions.*/
 
 /*#include<iostream>
@@ -157,48 +153,80 @@ int main(){
 
 /*4. Write a program with classes to represent a circle, rectangle, and triangle. Each class should have data members to represent the actual objects and member functions to read and display objects, find perimeter and area of the objects, and other useful functions. Use the classes to create objects in your program.*/
 
-/*#define _USE_MATH_DEFINES
-#include <iostream>
+/*#include <iostream>
 #include <cmath>
 using namespace std;
 
-class Circle {
+class Circle
+{
     double r;
+
 public:
-    void read() { cout << "\nEnter radius of the circle: "; cin >> r; }
-    double area() { return M_PI * r * r; }
-    double peri() { return 2 * M_PI * r; }
-    void show() {
+    void read()
+    {
+        cout << "\nEnter radius of the circle: ";
+        cin >> r;
+    }
+    double area()
+    {
+        return 3.14 * r * r;
+    }
+    double peri()
+    {
+        return 2 * 3.14 * r;
+    }
+    void show()
+    {
         cout << "\nCircle : Radius: " << r << ", Area: " << area()
              << ", Circumference: " << peri() << endl;
     }
 };
 
-class Rectangle {
+class Rectangle
+{
     double l, b;
+
 public:
-    void read() { cout << "\nEnter length and breadth of the rectangle: "; cin >> l >> b; }
-    double area() { return l * b; }
-    double peri() { return 2 * (l + b); }
-    void show() {
+    void read()
+    {
+        cout << "\nEnter length and breadth of the rectangle: ";
+        cin >> l >> b;
+    }
+    double area()
+    {
+        return l * b;
+    }
+    double peri()
+    {
+        return 2 * (l + b);
+    }
+    void show()
+    {
         cout << "\nRectangle : Length: " << l << ", Breadth: " << b
              << ", Area: " << area() << ", Perimeter: " << peri() << endl;
     }
 };
 
-class Triangle {
+class Triangle
+{
     double a, b, c;
+
 public:
-    void read() {
-        cout << "\nEnter three sides of the triangle: "; cin >> a >> b >> c;
-        if (a + b <= c || a + c <= b || b + c <= a) a = b = c = 0;
+    void read()
+    {
+        cout << "\nEnter three sides of the triangle: ";
+        cin >> a >> b >> c;
+        if (a + b <= c || a + c <= b || b + c <= a)
+            a = b = c = 0;
     }
     double peri() { return a + b + c; }
-    double area() {
+    double area()
+    {
         double s = peri() / 2;
         return (a && b && c) ? sqrt(s * (s - a) * (s - b) * (s - c)) : 0;
     }
-    void show() {
+    void show()
+    {
         cout << "\nTriangle : Sides: " << a << ", " << b << ", " << c;
         if (a && b && c)
             cout << ", Area: " << area() << ", Perimeter: " << peri() << endl;
@@ -207,15 +235,20 @@ public:
     }
 };
 
-int main() {
-    Circle c; Rectangle r; Triangle t;
+int main()
+{
+    Circle c;
+    Rectangle r;
+    Triangle t;
     cout << "Shape Calculator:\n";
-    c.read(); c.show();
-    r.read(); r.show();
-    t.read(); t.show();
+    c.read();
+    c.show();
+    r.read();
+    r.show();
+    t.read();
+    t.show();
     return 0;
-}
-*/
+}*/
 
 /*5. Assume that an object represents an employee report that contains information like employee id, total bonus, total overtime in a particular year. Use an array of objects to represent n employees' reports. Write a program that displays the report. Use setpara() member function to set report attributes by passing the arguments and member function displayreport() to show the report according to the parameter passed. Display the report in the following format.
 
