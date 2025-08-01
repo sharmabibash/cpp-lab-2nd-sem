@@ -137,8 +137,8 @@ int main() {
     fullSentence.display();
 
     return 0;
-}
-*/
+}*/
+
 
 /*3. Write a class that can store Department ID and Department Name with constructors to initialize its members. Write destructor member in the same class and display the message "Object n goes out of the scope". Your program should be made such that it should show the order of constructor and destructor invocation.*/
 
@@ -258,8 +258,8 @@ int main() {
     p2.display();
 
     return 0;
-}
-*/
+}*/
+
 
 /*5. Write a program that illustrates the following relationship and comment on them. 
 
@@ -305,7 +305,7 @@ int main() {
 
 /*6. Create a class with a data member to hold a "serial number" for each object created from the class. That is, the first object created will be numbered 1, the second 2, and so on by using the basic concept of static data members. Use static member function if it is useful in the program. Otherwise, make a separate program that demonstrates the use of static member function.*/
 
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 class MyClass {
@@ -343,6 +343,6 @@ int main() {
     MyClass::showTotalObjects();
 
     return 0;
-}
+}*/
 
 

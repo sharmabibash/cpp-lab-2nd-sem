@@ -8,7 +8,7 @@ C. Demonstrate that all the member functions of one class are the friend functio
 
 Make the least possible classes to demonstrate all the above in a single program without conflict.*/
 
-/*#include <iostream>
+#include <iostream>
 using namespace std;
 
 class PointB;
@@ -97,7 +97,7 @@ int main() {
     // cout << "(" << p2.x << ", " << p2.y << ")" << endl;
 
     return 0;
-}*/
+}
 
 /*2. Write a class to store x, y, and z coordinates of a point in three-dimensional space. Overload the addition and subtraction operators for the addition and subtraction of two coordinate objects. Implement the operator functions as non-member functions.*/
 /*#include <iostream>
@@ -159,8 +159,8 @@ int main() {
     cout << "Difference: "; diff.display();
 
     return 0;
-}
-*/
+}*/
+
 
 /*3. Write a program to compare two objects of a class that contains an integer value as its data member. Make overloading functions to overload equality(==), less than(<), greater than(>), not equal (!=), greater than or equal to (>=), and less than or equal to(<=) operators using member operator functions.*/
 
